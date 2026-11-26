@@ -138,7 +138,7 @@ section { padding: 80px 0; }
 @media (min-width: 760px) { .reviews { grid-template-columns: repeat(3, 1fr); } }
 .review { background: var(--white); border: 1px solid var(--line); border-radius: var(--radius); padding: 26px; display: flex; flex-direction: column; gap: 12px; }
 .review .stars { color: #c9a25b; letter-spacing: 2px; font-size: 1rem; }
-.review blockquote { margin: 0; font-family: "Cormorant Garamond", serif; font-size: 1.25rem; line-height: 1.35; color: var(--ink); }
+.review blockquote { margin: 0; font-family: "Cormorant Garamond", serif; font-size: 1.18rem; line-height: 1.4; color: var(--ink); }
 .review cite { font-style: normal; font-size: .85rem; font-weight: 600; color: var(--olive-dark); margin-top: auto; }
 .review cite small { display: block; font-weight: 400; color: var(--muted); }
 .review.placeholder { border-style: dashed; }
