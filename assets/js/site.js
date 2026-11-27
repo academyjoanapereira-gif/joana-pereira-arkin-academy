@@ -1,6 +1,6 @@
 // ===== CONFIGURAÇÃO =====
 // Número de WhatsApp com indicativo, só números (ex.: 351912345678)
-const WHATSAPP = "351XXXXXXXXX";
+const WHATSAPP = "351968202794";
 
 // Cada link com data-wa="mensagem" abre o WhatsApp com essa mensagem já escrita.
 document.querySelectorAll("[data-wa]").forEach((a) => {
