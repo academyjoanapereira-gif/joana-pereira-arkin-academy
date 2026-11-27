@@ -23,6 +23,8 @@ const PAY_LINKS = {
   "bl-grupo": "",       // Beauty Lips · grupo
   "bl-individual": "",  // Beauty Lips · individual
   "bl-masterclass": "", // Beauty Lips · masterclass
+  "pg-grupo": "",       // Método Pigment · grupo
+  "pg-vip": "",         // Método Pigment · VIP
   "sinal": "",       // Sinal para marcação de tratamento (opcional)
 };
 document.querySelectorAll("[data-pay]").forEach((a) => {

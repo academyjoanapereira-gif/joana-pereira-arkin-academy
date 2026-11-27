@@ -300,3 +300,4 @@ body { padding-bottom: 0; }
 [data-count], .counter strong, .badge strong, .stats strong, .facts strong { font-variant-numeric: lining-nums tabular-nums; }
 .card-photo img.tall { aspect-ratio: 4/5; }
 .price .amount, h1, h2, h3 { font-variant-numeric: lining-nums; }
+@media (min-width: 760px) { .prices.two-up { grid-template-columns: repeat(2, 1fr); max-width: 820px; margin-left: auto; margin-right: auto; } }
