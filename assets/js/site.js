@@ -20,6 +20,9 @@ const PAY_LINKS = {
   "grupo": "",       // Formação em grupo · Iniciantes
   "individual": "",  // Formação individual · Iniciantes
   "masterclass": "", // Masterclass Profissionais
+  "bl-grupo": "",       // Beauty Lips · grupo
+  "bl-individual": "",  // Beauty Lips · individual
+  "bl-masterclass": "", // Beauty Lips · masterclass
   "sinal": "",       // Sinal para marcação de tratamento (opcional)
 };
 document.querySelectorAll("[data-pay]").forEach((a) => {
