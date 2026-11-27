@@ -278,3 +278,5 @@ section { padding: 80px 0; }
 .timeline b { color: var(--olive); } .day.feature .timeline b { color: var(--beige); }
 .day-goal { margin: 14px 0 0; font-style: italic; font-size: .9rem !important; }
 .day.feature .day-goal { color: #dfe2d4; }
+.klarna-line { margin: -8px 0 14px !important; font-size: .82rem !important; font-weight: 600; color: var(--beige-dark) !important; }
+.price.feature .klarna-line { color: var(--beige) !important; }
