@@ -27,3 +27,17 @@ document.querySelectorAll("[data-pay]").forEach((a) => {
   if (url) { a.href = url; a.target = "_blank"; a.rel = "noopener"; a.hidden = false; }
   else { a.hidden = true; }
 });
+
+// Esconde o botão flutuante do WhatsApp quando já há botões de WhatsApp à vista
+// (secção final, "Onde estamos" e rodapé), para não tapar texto nem botões.
+(() => {
+  const fab = document.querySelector(".wa-float");
+  if (!fab || !("IntersectionObserver" in window)) return;
+  const zones = document.querySelectorAll(".bg-olive, #visita, .site-footer, .hero");
+  const visible = new Set();
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach((e) => (e.isIntersecting ? visible.add(e.target) : visible.delete(e.target)));
+    fab.classList.toggle("off", visible.size > 0);
+  }, { threshold: 0.01 });
+  zones.forEach((z) => io.observe(z));
+})();
