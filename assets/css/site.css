@@ -272,3 +272,9 @@ section { padding: 80px 0; }
 .klarna-badge { flex: 0 0 auto; background: #ffb3c7; color: #17120f; font-weight: 700; border-radius: 8px; padding: 10px 14px; font-size: .95rem; }
 @media (max-width: 560px) { .klarna { flex-direction: column; align-items: flex-start; } }
 .steps.big { max-width: 720px; }
+.timeline { list-style: none !important; padding: 0 !important; margin: 0 0 12px !important; }
+.timeline li { display: grid; grid-template-columns: 64px 1fr; gap: 8px; padding: 7px 0; border-bottom: 1px dashed var(--line); margin: 0 !important; }
+.day.feature .timeline li { border-color: rgba(255,255,255,.18); }
+.timeline b { color: var(--olive); } .day.feature .timeline b { color: var(--beige); }
+.day-goal { margin: 14px 0 0; font-style: italic; font-size: .9rem !important; }
+.day.feature .day-goal { color: #dfe2d4; }
