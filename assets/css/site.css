@@ -289,3 +289,12 @@ body { padding-bottom: 0; }
 .wa-float { transition: opacity .25s, transform .25s; }
 .wa-float.off { opacity: 0; transform: translateY(16px); pointer-events: none; }
 @media (max-width: 1279px) { .wa-float { display: none; } }
+
+/* Contadores */
+.counters { padding: 40px 0; background: var(--olive); color: #fff; }
+.counters .wrap { display: grid; grid-template-columns: repeat(2, 1fr); gap: 28px 16px; text-align: center; }
+@media (min-width: 760px) { .counters .wrap { grid-template-columns: repeat(4, 1fr); } }
+.counter strong { display: block; font-family: "Cormorant Garamond", serif; font-weight: 600; font-size: clamp(2.6rem, 7vw, 3.6rem); line-height: 1; color: #fff; }
+.counter:first-child strong { color: var(--beige); }
+.counter span { display: block; margin-top: 8px; font-size: .74rem; letter-spacing: .14em; text-transform: uppercase; color: #dfe2d4; }
+[data-count], .counter strong, .badge strong, .stats strong, .facts strong { font-variant-numeric: lining-nums tabular-nums; }

@@ -41,3 +41,22 @@ document.querySelectorAll("[data-pay]").forEach((a) => {
   }, { threshold: 0.01 });
   zones.forEach((z) => io.observe(z));
 })();
+
+// Contadores: o número sobe até ao valor final quando aparece no ecrã.
+(() => {
+  const els = document.querySelectorAll("[data-count]");
+  const reduce = window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const fmt = (n) => String(n).replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+  const run = (el) => {
+    const end = +el.dataset.count, suf = el.dataset.suffix || "", t0 = performance.now(), dur = end > 100 ? 2200 : 1400;
+    const step = (t) => {
+      const k = Math.min(1, (t - t0) / dur), e = 1 - Math.pow(1 - k, 3);
+      el.textContent = fmt(Math.round(end * e)) + suf;
+      if (k < 1) requestAnimationFrame(step);
+    };
+    requestAnimationFrame(step);
+  };
+  if (reduce || !("IntersectionObserver" in window)) return;
+  const io = new IntersectionObserver((es) => es.forEach((e) => { if (e.isIntersecting) { run(e.target); io.unobserve(e.target); } }), { threshold: 0.6 });
+  els.forEach((el) => io.observe(el));
+})();
