@@ -298,3 +298,4 @@ body { padding-bottom: 0; }
 .counter:first-child strong { color: var(--beige); }
 .counter span { display: block; margin-top: 8px; font-size: .74rem; letter-spacing: .14em; text-transform: uppercase; color: #dfe2d4; }
 [data-count], .counter strong, .badge strong, .stats strong, .facts strong { font-variant-numeric: lining-nums tabular-nums; }
+.card-photo img.tall { aspect-ratio: 4/5; }
