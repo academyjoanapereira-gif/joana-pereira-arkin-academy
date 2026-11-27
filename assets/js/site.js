@@ -11,3 +11,19 @@ document.querySelectorAll("[data-wa]").forEach((a) => {
 });
 
 document.querySelectorAll("[data-year]").forEach((el) => (el.textContent = new Date().getFullYear()));
+
+// ===== PAGAMENTOS (Stripe / Klarna) =====
+// Quando os links estiverem prontos, cole-os aqui. Os botões só aparecem no site
+// quando o link correspondente estiver preenchido.
+const PAY_LINKS = {
+  "inscricao": "",   // Inscrição 200€
+  "grupo": "",       // Formação em grupo · Iniciantes
+  "individual": "",  // Formação individual · Iniciantes
+  "masterclass": "", // Masterclass Profissionais
+  "sinal": "",       // Sinal para marcação de tratamento (opcional)
+};
+document.querySelectorAll("[data-pay]").forEach((a) => {
+  const url = PAY_LINKS[a.getAttribute("data-pay")];
+  if (url) { a.href = url; a.target = "_blank"; a.rel = "noopener"; a.hidden = false; }
+  else { a.hidden = true; }
+});
